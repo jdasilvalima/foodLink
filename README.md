@@ -32,5 +32,7 @@ WIP
 
 ## III. REFERENCES
 ### III.1 LINKS
+* [Express.js](https://expressjs.com/)
+* https://expressjs.com/en/starter/basic-routing.html
 
 ### III.2 COMMANDS
