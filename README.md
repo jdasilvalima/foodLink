@@ -25,7 +25,10 @@ WIP
 - [Docker](https://www.docker.com/) neeeds to be installed
 
 ### II.2 BACKEND
-WIP
+```bash
+    docker build -t foodlink-express_api .
+    docker run -p 3000:3000 foodlink-express_api
+```
 
 ### II.3 FRONTEND
 WIP
