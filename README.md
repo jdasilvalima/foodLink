@@ -39,3 +39,7 @@ WIP
 * https://expressjs.com/en/starter/basic-routing.html
 
 ### III.2 COMMANDS
+ESLint
+```bash
+    npx eslint
+```
