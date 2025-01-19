@@ -1,0 +1,21 @@
+meta {
+  name: Create a supply
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/api/supplies
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "number": "SUP002",
+    "name": "Eggs non organic",
+    "unitType": "box",
+    "unitsPerPackage": 15,
+    "type": "raw"
+  }
+}
