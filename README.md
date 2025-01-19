@@ -14,7 +14,7 @@ A real-time web application designed to help small food businesses manage tracea
 
 ### I.2 Goals
 - Deepen my knowledge of **Adonis.js**
-- Gain hands-on experience with **GraphQL**, mastering query design, schema development, and optimization for complex data relationships.
+- Create an open source project for small food companies
 
 ### I.3 Web Application Overview
 WIP
@@ -25,8 +25,7 @@ WIP
 
 ### II.2 BACKEND
 ```bash
-    docker build -t foodlink-express_api .
-    docker run -p 3000:3000 foodlink-express_api
+    WIP
 ```
 
 ### II.3 FRONTEND
@@ -34,11 +33,7 @@ WIP
 
 ## III. REFERENCES
 ### III.1 LINKS
-* [Express.js](https://expressjs.com/)
-* https://expressjs.com/en/starter/basic-routing.html
+* [Adonis.js](https://adonisjs.com/)
 
 ### III.2 COMMANDS
-ESLint
-```bash
-    npx eslint
-```
+
