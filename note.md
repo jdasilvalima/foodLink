@@ -20,3 +20,5 @@ https://www.youtube.com/watch?v=hAdehkL6MLs&list=PLP4220MSvvuzbX-HcH7xg25biHHJ8u
 
 
 docker-compose up -d
+
+pnpm run storybook
