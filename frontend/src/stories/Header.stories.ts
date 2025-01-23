@@ -1,22 +1,13 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import type { Meta, StoryObj } from '@storybook/vue3';
 
-import MyHeader from './Header.vue';
+import { Header } from './Header';
 
 const meta = {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/configure/#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: 'Example/Header',
-  component: MyHeader,
-  render: (args: any) => ({
-    components: { MyHeader },
-    setup() {
-      return { args };
-    },
-    template: '<my-header :user="args.user" />',
-  }),
+  component: Header,
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
@@ -26,9 +17,7 @@ const meta = {
     onLogout: fn(),
     onCreateAccount: fn(),
   },
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-} satisfies Meta<typeof MyHeader>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -41,8 +30,4 @@ export const LoggedIn: Story = {
   },
 };
 
-export const LoggedOut: Story = {
-  args: {
-    user: null,
-  },
-};
+export const LoggedOut: Story = {};
