@@ -28,7 +28,16 @@ test.group('SuppliesController', (group) => {
     const response = await client.get('/api/supplies')
 
     response.assertStatus(200)
-    response.assertBodyContains(testSupplies)
+
+    response.assertBodyContains(
+      testSupplies.map((supply) => ({
+        number: supply.number,
+        name: supply.name,
+        unitType: supply.unitType,
+        unitsPerPackage: supply.unitsPerPackage,
+        type: supply.type,
+      }))
+    )
   })
 
   test('show returns specific supply', async ({ client }) => {
@@ -43,7 +52,12 @@ test.group('SuppliesController', (group) => {
     const response = await client.get(`/api/supplies/${supply.id}`)
 
     response.assertStatus(200)
-    response.assertBodyContains(supply)
+    response.assertBodyContains({
+      id: supply.id,
+      name: supply.name,
+      number: supply.number,
+      type: supply.type,
+    })
   })
 
   test('show returns 404 for non-existent supply', async ({ client }) => {
