@@ -1,6 +1,6 @@
 import { HttpContext } from '@adonisjs/core/http'
 import Supply from '#models/supply'
-import { createSupplyValidator } from '#validators/supply'
+import { createSupplyValidator, updateSupplyValidator } from '#validators/supply'
 
 export default class SuppliesController {
   /**
@@ -40,7 +40,7 @@ export default class SuppliesController {
       return response.notFound({ message: 'Supply not found' })
     }
 
-    const data = await request.validateUsing(createSupplyValidator)
+    const data = await request.validateUsing(updateSupplyValidator)
     supply.merge(data)
     await supply.save()
 
