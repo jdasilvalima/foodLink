@@ -1,4 +1,3 @@
-// database/seeders/user.ts
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import User from '#models/user'
 import { UserRole } from '#models/user'

@@ -1,4 +1,3 @@
-// app/validators/user.ts
 import vine from '@vinejs/vine'
 import { UserRole } from '#models/user'
 
