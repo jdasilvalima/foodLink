@@ -10,6 +10,7 @@
 import router from '@adonisjs/core/services/router'
 const SupplyController = () => import('#controllers/supplies_controller')
 const SuppliersController = () => import('#controllers/suppliers_controllers')
+const UnitOfMeasuresController = () => import('#controllers/unit_of_measures_controller')
 
 router.group(() => {
   router.get('/', [SupplyController, 'index'])
@@ -26,3 +27,13 @@ router.group(() => {
   router.put('/:id', [SuppliersController, 'update'])
   router.delete('/:id', [SuppliersController, 'destroy'])
 }).prefix('/api/suppliers')
+
+router.group(() => {
+  router.get('/', [UnitOfMeasuresController, 'index'])
+  router.get('/active', [UnitOfMeasuresController, 'active'])
+  router.post('/', [UnitOfMeasuresController, 'store'])
+  router.get('/:id', [UnitOfMeasuresController, 'show'])
+  router.put('/:id', [UnitOfMeasuresController, 'update'])
+  router.patch('/:id/toggle-active', [UnitOfMeasuresController, 'toggleActive'])
+  router.delete('/:id', [UnitOfMeasuresController, 'destroy'])
+}).prefix('/api/units-of-measure')
