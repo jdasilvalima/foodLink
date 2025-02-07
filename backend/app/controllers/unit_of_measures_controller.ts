@@ -1,6 +1,9 @@
 import { HttpContext } from '@adonisjs/core/http'
 import UnitOfMeasure from '#models/unit_of_measure'
-import { createUnitOfMeasureValidator, updateUnitOfMeasureValidator } from '#validators/unit_of_measure'
+import {
+  createUnitOfMeasureValidator,
+  updateUnitOfMeasureValidator,
+} from '#validators/unit_of_measure'
 
 export default class UnitOfMeasuresController {
   /**
